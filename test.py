@@ -1,9 +1,10 @@
 import time
+import math
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
-import math
+
 
 def calc(x):
   return str(math.log(abs(12*math.sin(int(x)))))
@@ -28,9 +29,7 @@ try:
 
     button_submit = browser.find_element(By.ID, 'solve')
     button_submit.click()
-
     time.sleep(5)
 
 finally:
-    browser.close()
     browser.quit()
