@@ -17,6 +17,6 @@ def test_button_is_true(browser):
         button_value = browser.find_element(By.CLASS_NAME, 'btn-add-to-basket')
     except NameError as nameErr:
         print('Кнопки нет', nameErr)
-    time.sleep(3)
+    time.sleep(30)
 
     assert button_value.text == button_is.text, 'Кнопки нет'
